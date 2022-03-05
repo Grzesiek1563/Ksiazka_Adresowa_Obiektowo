@@ -11,22 +11,29 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer adresatMenedzer;
+    AdresatMenedzer *adresatMenedzer;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami)
+    KsiazkaAdresowa(string NAZWAPLIKUZUZYTKOWNIKAMI, string NAZWAPLIKUZADRESATAMI)
+    : uzytkownikMenedzer(NAZWAPLIKUZUZYTKOWNIKAMI), NAZWA_PLIKU_Z_ADRESATAMI(NAZWAPLIKUZADRESATAMI)
     {
-        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+        adresatMenedzer = NULL;
     };
+    ~KsiazkaAdresowa()
+    {
+        delete adresatMenedzer;
+        adresatMenedzer = NULL;
+    }
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogujUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
-    void dodajAdresata(int idZalogowanegoUzytkownika);
-    void wyswietlWszystkichAdresatow(int idZalogowanegoUzytkownika);
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
+    bool czyUzytkownikJestZalogowany();
 };
 
 #endif

@@ -1,22 +1,30 @@
 #include "AdresatMenedzer.h"
 
-void AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika)
+void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
+    adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    dopiszAdresataDoPliku(adresat);
+    if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
+    {
+        cout<<"Nowy adresat zostal dodany"<<endl;
+    }
+    else
+    {
+        cout<<"Blad! Nie udalo sie dodac nowego adresata do pliku. "<<endl;
+    }
+    system("pause");
 }
 
-Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
+Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(wyznaczIdAdresata());
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -39,7 +47,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
     return adresat;
 }
 
-void AdresatMenedzer::wyswietlWszystkichAdresatow(int idZalogowanegoUzytkownika)
+void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
     system("cls");
     if (!adresaci.empty())
@@ -69,21 +77,4 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-int AdresatMenedzer::wyznaczIdAdresata()
-{
-    int wyznaczoneId = plikZAdresatami.pobierzIdOstatniegoAdresata()+1;
-    plikZAdresatami.ustawIdOstatniegoAdresata(wyznaczoneId);
-    return wyznaczoneId;
-}
-
-
-void AdresatMenedzer::dopiszAdresataDoPliku(Adresat adresat)
-{
-    plikZAdresatami.dopiszAdresataDoPliku(adresat);
-}
-
-void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
-{
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-}
 

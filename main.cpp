@@ -7,12 +7,11 @@ using namespace std;
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt");
-
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt", "Adresaci.txt");
     char wybor;
     while (true)
     {
-        if (ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika() == 0)
+        if (!ksiazkaAdresowa.czyUzytkownikJestZalogowany())
         {
             wybor = MetodyPomocnicze::wybierzOpcjeZMenuGlownego();
 
@@ -35,15 +34,14 @@ int main()
         }
         else
         {
-            ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika());
             wybor = MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika();
             switch (wybor)
             {
             case '1':
-                ksiazkaAdresowa.dodajAdresata(ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika());
+                ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                ksiazkaAdresowa.wyswietlWszystkichAdresatow(ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika());
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '3':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
