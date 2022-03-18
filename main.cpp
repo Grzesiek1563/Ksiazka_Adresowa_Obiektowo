@@ -41,12 +41,15 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-                break;
-            case '3':
-                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '4':
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                break;
+            case '7':
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                break;
+            case '8':
                 ksiazkaAdresowa.wylogujUzytkownika();
                 break;
             }
