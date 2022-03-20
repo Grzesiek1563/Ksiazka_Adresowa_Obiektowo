@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
+      <x>72</x>
       <y>24</y>
       <w>540</w>
       <h>432</h>
@@ -32,7 +32,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1392</x>
+      <x>1284</x>
       <y>12</y>
       <w>384</w>
       <h>216</h>
@@ -49,7 +49,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
+      <x>648</x>
       <y>0</y>
       <w>600</w>
       <h>336</h>
@@ -77,21 +77,18 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1392</x>
-      <y>252</y>
+      <x>1464</x>
+      <y>972</y>
       <w>732</w>
       <h>300</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
---
-- NAZWA_PLIKU_Z_UZYTKOWNIKAMI: Const String
 --
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku () : void
 + wczytajUzytkownikowZPliku() : void
 + zapiszWszystkichUzytkownikowDoPliku () : void
 + wczytajLiczbeCalkowita() : Integer
-- czyPlikJestPusty () : Bool
 - pobierzDaneUzytkownika() : Uzytkownik
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String</panel_attributes>
     <additional_attributes/>
@@ -99,7 +96,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>168</x>
+      <x>60</x>
       <y>852</y>
       <w>612</w>
       <h>396</h>
@@ -121,8 +118,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1512</x>
-      <y>576</y>
+      <x>744</x>
+      <y>348</y>
       <w>480</w>
       <h>228</h>
     </coordinates>
@@ -144,14 +141,13 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>816</x>
-      <y>576</y>
+      <x>780</x>
+      <y>972</y>
       <w>660</w>
       <h>384</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
-- NAZWA_PLIKU_Z_ADRESATAMI : Const String
 - idOstatniegoAdresata : Integer
 --
 + PlikZAdresatami()
@@ -160,7 +156,6 @@
 + usunAdresataZPliku() : void
 + edytujAdresataWPliku() : void
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami() : String
-- czyPlikJestPusty() : bool
 - pobierzDaneAdresata() : Adresat
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : Integer
@@ -171,7 +166,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
+      <x>72</x>
       <y>468</y>
       <w>576</w>
       <h>372</h>
@@ -195,6 +190,22 @@
 - podajIdWybranegoAdresata() : Integer
 
 </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1104</x>
+      <y>624</y>
+      <w>660</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>PlikTekstowy
+--
+- NAZWA_PLIKU : Const String
+--
++ PlikTekstowy()
++ czyPlikJestPusty() : Bool</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
