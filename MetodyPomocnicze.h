@@ -9,9 +9,9 @@ using namespace std;
 
 class MetodyPomocnicze
 {
-    static char wczytajZnak();
 
 public:
+    static char wczytajZnak();
     static string konwerjsaIntNaString(int liczba);
     static int konwersjaStringNaInt(string liczba);
     static string wczytajLinie();
@@ -19,6 +19,8 @@ public:
     static char wybierzOpcjeZMenuUzytkownika();
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    static int wczytajLiczbeCalkowita();
+    static int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
 };
 
 #endif

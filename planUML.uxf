@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>12</x>
-      <y>84</y>
+      <y>108</y>
       <w>540</w>
       <h>432</h>
     </coordinates>
@@ -23,14 +23,17 @@
 + wylogujUzytkownika() : void
 + dodajAdresata(): void
 + wyswietlWszystkichAdresatow() : void
-+ czyUzytkownikJestZalogowany() : bool</panel_attributes>
++ czyUzytkownikJestZalogowany() : bool
++ wyszukajAdresatowPoImieniu() : void
++ wyszukajAdresatowPoNazwisku() : void
++ usunAdresata() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>1224</x>
-      <y>72</y>
+      <y>96</y>
       <w>384</w>
       <h>216</h>
     </coordinates>
@@ -47,7 +50,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>588</x>
-      <y>60</y>
+      <y>84</y>
       <w>600</w>
       <h>336</h>
     </coordinates>
@@ -75,7 +78,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>1224</x>
-      <y>312</y>
+      <y>336</y>
       <w>732</w>
       <h>300</h>
     </coordinates>
@@ -87,6 +90,7 @@
 + dopiszUzytkownikaDoPliku () : void
 + wczytajUzytkownikowZPliku() : void
 + zapiszWszystkichUzytkownikowDoPliku () : void
++ wczytajLiczbeCalkowita() : Integer
 - czyPlikJestPusty () : Bool
 - pobierzDaneUzytkownika() : Uzytkownik
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String</panel_attributes>
@@ -96,7 +100,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>912</y>
+      <y>936</y>
       <w>408</w>
       <h>240</h>
     </coordinates>
@@ -110,14 +114,14 @@
 + wybierzOpcjeZMenuUzytkownika() : Char
 + zamienPierwszaLitereNaDuzaAPozostaleNaMale() : String
 + pobierzLiczbe() : String
-</panel_attributes>
++ wczytajLiczbeCalkowita() : Integer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>1344</x>
-      <y>636</y>
+      <y>660</y>
       <w>480</w>
       <h>228</h>
     </coordinates>
@@ -140,7 +144,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>648</x>
-      <y>636</y>
+      <y>660</y>
       <w>660</w>
       <h>276</h>
     </coordinates>
@@ -163,10 +167,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>600</y>
+      <x>12</x>
+      <y>552</y>
       <w>576</w>
-      <h>228</h>
+      <h>372</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -177,8 +181,13 @@
 + AdresatMenedzer()
 + dodajAdresata () : void
 + wyswietlWszystkichAdresatow () : void
++ wyszukajAdresatowPoImieniu() : void
++ wyszukajAdresatowPoNazwisku() : void
++ usunAdresata() : void
 - podajDaneNowegoAdresata() : Adresat
 - wyswietlDaneAdresata() : void
+- wyswietlIloscWyszukanychAdresatow() : void
+- podajIdWybranegoAdresata() : Integer
 
 </panel_attributes>
     <additional_attributes/>
