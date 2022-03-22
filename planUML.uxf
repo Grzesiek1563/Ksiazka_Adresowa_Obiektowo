@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
+      <x>12</x>
       <y>24</y>
       <w>540</w>
       <h>432</h>
@@ -32,7 +32,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1284</x>
+      <x>1224</x>
       <y>12</y>
       <w>384</w>
       <h>216</h>
@@ -49,7 +49,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
+      <x>588</x>
       <y>0</y>
       <w>600</w>
       <h>336</h>
@@ -77,7 +77,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1464</x>
+      <x>1404</x>
       <y>972</y>
       <w>732</w>
       <h>300</h>
@@ -96,7 +96,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
+      <x>0</x>
       <y>852</y>
       <w>612</w>
       <h>396</h>
@@ -118,8 +118,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>744</x>
-      <y>348</y>
+      <x>672</x>
+      <y>360</y>
       <w>480</w>
       <h>228</h>
     </coordinates>
@@ -141,7 +141,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
+      <x>720</x>
       <y>972</y>
       <w>660</w>
       <h>384</h>
@@ -155,18 +155,20 @@
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku() : vector&lt;Adresat&gt;
 + usunAdresataZPliku() : void
 + edytujAdresataWPliku() : void
++ ustawIdOstatniegoAdresataPoUsunieciuWybranegoAdresata : void
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami() : String
 - pobierzDaneAdresata() : Adresat
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : Integer
 - usunPlik() : void
-- zmienNazwePliku() : void</panel_attributes>
+- zmienNazwePliku() : void
+- pobierzZPlikuIdOstatniegoAdresata : Integer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
+      <x>12</x>
       <y>468</y>
       <w>576</w>
       <h>372</h>
@@ -195,7 +197,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1104</x>
+      <x>1044</x>
       <y>624</y>
       <w>660</w>
       <h>336</h>

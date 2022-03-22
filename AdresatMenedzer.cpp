@@ -161,27 +161,25 @@ void AdresatMenedzer::usunAdresata()
     char znak;
     bool czyIstniejeAdresat = false;
 
-    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    for (int i = 0; i < adresaci.size(); i++)
     {
-        if (itr -> pobierzId() == idUsuwanegoAdresata)
+        if (adresaci[i].pobierzId() == idUsuwanegoAdresata)
         {
             czyIstniejeAdresat = true;
             cout << endl << "Potwierdz naciskajac klawisz 't': ";
             znak = MetodyPomocnicze::wczytajZnak();
             if (znak == 't')
             {
-                //numerLiniiUsuwanegoAdresata = zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
                 plikZAdresatami.usunAdresataZPliku(idUsuwanegoAdresata);
-                adresaci.erase(itr);
+                adresaci.erase(adresaci.begin()+i);
+                plikZAdresatami.ustawIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsuwanegoAdresata);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
-                //return idUsuwanegoAdresata;
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
-                system("p       ause");
-                //return 0;
+                system("pause");
             }
         }
     }
@@ -190,7 +188,6 @@ void AdresatMenedzer::usunAdresata()
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
     }
-    //return 0;
 }
 
 int AdresatMenedzer::podajIdWybranegoAdresata()

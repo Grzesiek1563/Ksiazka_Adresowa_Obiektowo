@@ -2,7 +2,7 @@
 #define ADRESATMENEDZER_H
 
 #include <iostream>
-//#include <vector>
+
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 #include "UzytkownikMenedzer.h"
