@@ -111,7 +111,7 @@ _+ chooseMainMenuOption() : Char_
 _+ chooseUserMenuOption() : Char_
 _+ chooseEditMenuOption() : Char_
 _+ replaceFirstLetterWithUppercaseAndRestWithLowercase() : String_
-_+ getNumber() : String_
+_+ getNumberFromText() : String_
 _+ loadInteger() : Integer_</panel_attributes>
     <additional_attributes/>
   </element>
